@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Thibaut Lhernout</title>
+    <meta name="description" content="Compétences et projets R&T de Thibaut Lhernout.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">TL.PORTFOLIO</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="section animate-in">
+        <div class="container" style="padding-top: 60px;">
+            <div style="text-align: center; margin-bottom: var(--space-lg);">
+                <h1 style="font-size: 3rem; margin-bottom: var(--space-sm);">Mes <span
+                        style="color: var(--primary);">Compétences</span></h1>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; margin-bottom: 2rem;">
+                    Issu du programme national BUT R&T, voici les 5 piliers de ma formation. Cliquez sur une compétence
+                    pour filtrer les projets associés.
+                </p>
+                <button class="btn btn-primary" id="filter-all" style="margin-bottom: 2rem;">Afficher tout</button>
+            </div>
+
+            <div class="competence-grid">
+                <!-- Administrer -->
+                <div class="competence-card filter-btn" data-filter="admin">
+                    <div class="competence-icon">⚙️</div>
+                    <h3>Administrer</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0.5rem 0;">
+                        Gérer les réseaux et l'Internet. Configuration d'équipements, gestion des utilisateurs et
+                        services.
+                    </p>
+                    <span class="project-link">Filtrer par cette compétence →</span>
+                </div>
+
+                <!-- Connecter -->
+                <div class="competence-card filter-btn" data-filter="connect">
+                    <div class="competence-icon">🌐</div>
+                    <h3>Connecter</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0.5rem 0;">
+                        Connecter les entreprises et les usagers. Solutions de télécoms et transmission de données.
+                    </p>
+                    <span class="project-link">Filtrer par cette compétence →</span>
+                </div>
+
+                <!-- Programmer -->
+                <div class="competence-card filter-btn" data-filter="prog">
+                    <div class="competence-icon">💻</div>
+                    <h3>Programmer</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0.5rem 0;">
+                        Créer des outils et applications informatiques pour les R&T. Automatisation et scripts.
+                    </p>
+                    <span class="project-link">Filtrer par cette compétence →</span>
+                </div>
+
+                <!-- Sécuriser -->
+                <div class="competence-card filter-btn" data-filter="secu">
+                    <div class="competence-icon">🛡️</div>
+                    <h3>Sécuriser</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0.5rem 0;">
+                        Parcours Cyber : Protéger les infrastructures et les données contre les menaces.
+                    </p>
+                    <span class="project-link">Filtrer par cette compétence →</span>
+                </div>
+
+                <!-- Surveiller -->
+                <div class="competence-card filter-btn" data-filter="surv">
+                    <div class="competence-icon">👁️</div>
+                    <h3>Surveiller</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0.5rem 0;">
+                        Mesurer et analyser les performances. Supervision d'infrastructure en temps réel.
+                    </p>
+                    <span class="project-link">Filtrer par cette compétence →</span>
+                </div>
+            </div>
+
+            <div id="projects" style="margin-top: var(--space-xl);">
+                <h2 style="text-align: center; margin-bottom: var(--space-lg);">Détails des <span
+                        style="color: var(--primary);">Projets</span></h2>
+
+                <div class="grid" style="gap: var(--space-lg);">
+                    <!-- Les projets seront ajoutés ici -->
+                    <div class="cv-container" style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                        <p style="color: var(--text-muted); font-style: italic;">
+                            Mes projets SAE seront bientôt affichés ici. Sélectionnez une compétence ci-dessus pour voir
+                            ma progression.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">TL.</a>
+                <p style="color: var(--text-muted); margin-top: var(--space-sm);">Portfolio réalisé dans le cadre du BUT
+                    R&T.</p>
+            </div>
+            <div class="footer-links">
+                <h3 style="margin-bottom: var(--space-sm);">Liens rapides</h3>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-legal">
+                <h3 style="margin-bottom: var(--space-sm);">Informations</h3>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="legal.html">Mentions Légales & Crédits</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Thibaut Lhernout. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('is-active');
+        });
+
+        // Portfolio Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+        const filterAllBtn = document.getElementById('filter-all');
+
+        function filterProjects(category) {
+            projectItems.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                    item.classList.add('animate-in');
+                } else {
+                    item.style.display = 'none';
+                    item.classList.remove('animate-in');
+                }
+            });
+
+            // Update active state of buttons
+            filterBtns.forEach(btn => btn.classList.remove('active-filter'));
+            if (category !== 'all') {
+                const activeBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
+                if (activeBtn) activeBtn.classList.add('active-filter');
+            }
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-filter');
+                filterProjects(category);
+
+                // Scroll to projects section
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        filterAllBtn.addEventListener('click', () => filterProjects('all'));
+    </script>
+</body>
+
+</html>

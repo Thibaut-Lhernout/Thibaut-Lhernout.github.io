@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales | Thibaut Lhernout</title>
+    <meta name="description" content="Informations légales et crédits du portfolio.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">TL.PORTFOLIO</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="section animate-in">
+        <div class="container" style="padding-top: 60px;">
+            <h1 style="margin-bottom: var(--space-md);">Mentions <span style="color: var(--primary);">Légales</span> &
+                Crédits</h1>
+
+            <div class="grid" style="gap: var(--space-md);">
+                <section class="cv-container">
+                    <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Éditeur du site</h2>
+                    <p>Ce site est un projet académique réalisé par :</p>
+                    <p><strong>Thibaut Lhernout</strong></p>
+                    <p>Étudiant en BUT Réseaux et Télécommunications</p>
+                    <p>IUT de Béthune / Université d'Artois</p>
+                </section>
+
+                <section class="cv-container">
+                    <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Hébergement</h2>
+                    <p>Le site est hébergé sur GitHub Pages.</p>
+                </section>
+
+                <section class="cv-container">
+                    <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Propriété intellectuelle</h2>
+                    <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur
+                        et la propriété intellectuelle. Tous les droits de reproduction sont réservés.</p>
+                </section>
+
+                <section class="cv-container">
+                    <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Protection des données (CNIL)</h2>
+                    <p>Conformément à la loi "Informatique et Libertés", vous disposez d'un droit d'accès, de
+                        rectification et de suppression des données qui vous concernent.</p>
+                    <p>Aucune donnée personnelle n'est collectée par ce site à l'insu de l'utilisateur.</p>
+                </section>
+
+                <section class="cv-container">
+                    <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Crédits</h2>
+                    <p>Design et développement : Thibaut Lhernout</p>
+                    <p>Polices : Google Fonts (Inter, Outfit)</p>
+                    <p>Icônes : Emojis Standard</p>
+                </section>
+            </div>
+
+            <div style="margin-top: var(--space-md); text-align: center;">
+                <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">TL.</a>
+                <p style="color: var(--text-muted); margin-top: var(--space-sm);">Portfolio réalisé dans le cadre du BUT
+                    R&T.</p>
+            </div>
+            <div class="footer-links">
+                <h3 style="margin-bottom: var(--space-sm);">Liens rapides</h3>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-legal">
+                <h3 style="margin-bottom: var(--space-sm);">Informations</h3>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="legal.html">Mentions Légales & Crédits</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Thibaut Lhernout. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('is-active');
+        });
+    </script>
+</body>
+
+</html>

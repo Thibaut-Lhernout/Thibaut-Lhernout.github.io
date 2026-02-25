@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil | Thibaut Lhernout - Portfolio R&T</title>
+    <meta name="description"
+        content="Portfolio professionnel de Thibaut Lhernout, étudiant en BUT Réseaux et Télécommunications.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">TL.PORTFOLIO</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="animate-in">
+        <section class="hero section">
+            <div class="container" style="text-align: center; padding-top: 100px;">
+                <img src="assets/me.jpg" alt="Thibaut Lhernout"
+                    style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin: 0 auto 2rem; border: 4px solid var(--primary); box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);">
+                <h1 style="font-size: 3.5rem; margin-bottom: var(--space-sm);">Thibaut <span
+                        style="color: var(--primary);">Lhernout</span></h1>
+                <p
+                    style="font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto var(--space-md);">
+                    Étudiant en BUT Réseaux et Télécommunications. Passionné par l'administration système et la
+                    cybersécurité.
+                </p>
+                <div class="flex" style="justify-content: center;">
+                    <a href="portfolio.html" class="btn btn-primary">Voir mes projets</a>
+                    <a href="cv.html" class="btn" style="border: 1px solid var(--primary); color: var(--primary);">Mon
+                        CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section">
+            <div class="container grid"
+                style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: center;">
+                <div class="about-text">
+                    <h2 style="font-size: 2.5rem; margin-bottom: var(--space-sm);">À propos de moi</h2>
+                    <p style="margin-bottom: var(--space-sm);">
+                        Bienvenue sur mon portfolio ! Je suis actuellement en formation Bachelor Universitaire de
+                        Technologie (BUT) en <strong style="color: var(--primary);">Réseaux et Télécommunications
+                            (R&T)</strong>.
+                    </p>
+                    <p>
+                        À travers ce site, vous découvrirez mon parcours, mes compétences transversales allant de
+                        l'administration réseau à la programmation, ainsi que les projets qui jalonnent ma formation.
+                    </p>
+                </div>
+                <div class="about-visual"
+                    style="background: var(--bg-card); padding: var(--space-md); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div style="font-family: monospace; color: var(--primary); font-size: 0.9rem;">
+                        <p>> identity --show</p>
+                        <p style="color: var(--white);">Name: Thibaut Lhernout</p>
+                        <p style="color: var(--white);">Status: BUT R&T Student</p>
+                        <p style="color: var(--white);">Interests: Networking, Cyber, Dev</p>
+                        <p>> _</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">TL.</a>
+                <p style="color: var(--text-muted); margin-top: var(--space-sm);">Portfolio réalisé dans le cadre du BUT
+                    R&T.</p>
+            </div>
+            <div class="footer-links">
+                <h3 style="margin-bottom: var(--space-sm);">Liens rapides</h3>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-legal">
+                <h3 style="margin-bottom: var(--space-sm);">Informations</h3>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="legal.html">Mentions Légales & Crédits</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Thibaut Lhernout. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('is-active');
+        });
+    </script>
+</body>
+
+</html>
