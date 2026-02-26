@@ -385,6 +385,90 @@ footer {
     border-top: 1px solid rgba(14, 165, 233, 0.1);
 }
 
+/* Reflective Section Styles */
+.reflective-toggle {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.reflective-toggle:hover {
+    background: rgba(14, 165, 233, 0.1);
+    color: var(--primary);
+}
+
+.reflective-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.reflective-content {
+    display: none;
+    padding: var(--space-md);
+    background: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    animation: slideDown 0.3s ease-out;
+}
+
+.reflective-content.active {
+    display: block;
+}
+
+.ac-block {
+    background: var(--bg-dark);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-left: 3px solid var(--secondary);
+    margin-bottom: 1.5rem;
+}
+
+.ac-title {
+    font-weight: 700;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.reflexion-item {
+    margin-bottom: 1rem;
+}
+
+.reflexion-item strong {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.reflexion-item p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
