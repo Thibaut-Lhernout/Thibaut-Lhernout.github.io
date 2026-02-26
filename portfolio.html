@@ -172,6 +172,83 @@
                         </div>
                     </div>
 
+                    <!-- SAE 1.02 -->
+                    <div class="project-item" data-category="admin connect">
+                        <div class="project-card">
+                            <img src="assets/sae102.png" alt="SAE 1.02 Cover" class="project-image">
+                            <div class="project-content">
+                                <div class="project-category">Administrer • Connecter • SAE 1.02</div>
+                                <h3>S'initier aux réseaux informatiques</h3>
+                                <p class="project-description">
+                                    Conception, simulation et mise en œuvre d'une infrastructure réseau complète
+                                    intégrant des services (Web, DNS, DHCP) et une gestion rigoureuse via Gantt.
+                                </p>
+                                <div class="project-livrables">
+                                    <h4>Livrables & Étapes</h4>
+                                    <ul
+                                        style="font-size: 0.85rem; color: var(--text-muted); padding-left: 1rem; list-style-type: none;">
+                                        <li style="margin-bottom: 0.25rem;">• Diagramme de Gantt (Gestion de projet)
+                                        </li>
+                                        <li style="margin-bottom: 0.25rem;">• Schéma Packet Tracer & Simulation</li>
+                                        <li>• Maquette VM & Services (Web, DNS, DHCP)</li>
+                                    </ul>
+                                </div>
+                                <div class="project-tags">
+                                    <span class="tag">Packet Tracer</span>
+                                    <span class="tag">Gantt</span>
+                                    <span class="tag">Linux/VM</span>
+                                    <span class="tag">Services Réseau</span>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">
+                                    <strong>Compétences :</strong> Installation, Configuration, Test, Organisation.
+                                </p>
+                            </div>
+                            <button class="reflective-toggle">
+                                Voir l’auto-évaluation (AC) <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="reflective-content">
+                                <div class="ac-block">
+                                    <div class="ac-title"><i class="fas fa-network-wired"></i> AC 1.02</div>
+                                    <div class="reflexion-grid">
+                                        <div class="reflexion-item">
+                                            <strong><i class="fas fa-bullseye"></i> Ce que j’ai fait</strong>
+                                            <p>Planification via Gantt et déploiement d'une infrastructure réseau
+                                                simulée puis réelle sur VM.</p>
+                                        </div>
+                                        <div class="reflexion-item">
+                                            <strong><i class="fas fa-lightbulb"></i> Pourquoi je l’ai fait</strong>
+                                            <p>Pour comprendre les fondamentaux du routage, de la commutation et des
+                                                services essentiels.</p>
+                                        </div>
+                                        <div class="reflexion-item">
+                                            <strong><i class="fas fa-screwdriver-wrench"></i> Comment je l’ai
+                                                fait</strong>
+                                            <p>Outils : Packet Tracer pour la simulation, Draw.io pour les schémas, et
+                                                VMware pour les machines Linux.</p>
+                                        </div>
+                                        <div class="reflexion-item">
+                                            <strong><i class="fas fa-triangle-exclamation"></i> Mes difficultés</strong>
+                                            <p>La configuration du serveur DNS pour résoudre correctement les noms de
+                                                domaine en local.</p>
+                                        </div>
+                                        <div class="reflexion-item">
+                                            <strong><i class="fas fa-graduation-cap"></i> Ce que j’en ai appris</strong>
+                                            <p>Maîtrise de la pile TCP/IP et importance de la planification amont pour
+                                                le succès d'un projet.</p>
+                                        </div>
+                                        <div class="reflexion-item">
+                                            <strong><i class="fas fa-rocket"></i> Ce que je ferais autrement</strong>
+                                            <p>Automatiser le déploiement des services avec des scripts Shell pour
+                                                gagner en efficacité.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- SAE 1.04 -->
                     <div class="project-item" data-category="prog">
                         <div class="project-card">
@@ -296,7 +373,8 @@
 
         function filterProjects(category) {
             projectItems.forEach(item => {
-                if (category === 'all' || item.getAttribute('data-category') === category) {
+                const categories = item.getAttribute('data-category').split(' ');
+                if (category === 'all' || categories.includes(category)) {
                     item.style.display = 'block';
                     item.classList.add('animate-in');
                 } else {
