@@ -205,6 +205,32 @@ footer {
     gap: var(--space-md);
 }
 
+.cv-contact-list {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.cv-contact-list li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    word-break: break-all;
+}
+
+.cv-contact-list i {
+    color: var(--primary);
+    width: 20px;
+    text-align: center;
+    margin-top: 3px;
+    /* Alignment with first line of text */
+}
+
+.cv-contact-list a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
 .cv-sidebar {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     padding-right: var(--space-md);
