@@ -103,7 +103,9 @@
                         l'Internet. Configuration d'équipements, gestion des utilisateurs et services.</p>
 
                     <div class="niveau-group">
-                        <h3 class="niveau-title">Niveau 1 : Assister l'administrateur du réseau</h3>
+                        <h3 class="niveau-title"><span>Niveau 1 : Assister l'administrateur du réseau (Année 1)</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </h3>
                         <div class="ac-grid">
                             <!-- AC 1.01 -->
                             <div class="ac-card">
@@ -205,7 +207,8 @@
                     </div>
 
                     <div class="niveau-group">
-                        <h3 class="niveau-title">Niveau 2 : Administrer un réseau</h3>
+                        <h3 class="niveau-title"><span>Niveau 2 : Administrer un réseau (Année 2)</span> <i
+                                class="fas fa-chevron-down"></i></h3>
                         <div class="ac-grid">
                             <!-- AC 2.01 -->
                             <div class="ac-card">
@@ -269,7 +272,8 @@
                         les usagers. Solutions de télécoms et transmission de données.</p>
 
                     <div class="niveau-group">
-                        <h3 class="niveau-title">Niveau 1 : Découvrir les transmissions et la ToIP</h3>
+                        <h3 class="niveau-title"><span>Niveau 1 : Découvrir les transmissions et la ToIP (Année
+                                1)</span> <i class="fas fa-chevron-down"></i></h3>
                         <div class="ac-grid">
                             <!-- AC 1.03 -->
                             <div class="ac-card">
@@ -323,8 +327,8 @@
                     </div>
 
                     <div class="niveau-group">
-                        <h3 class="niveau-title">Niveau 3 : Déployer une solution de connexion ou de communication sur
-                            IP</h3>
+                        <h3 class="niveau-title"><span>Niveau 3 : Déployer une solution de connexion ou communication
+                                sur IP (Année 3)</span> <i class="fas fa-chevron-down"></i></h3>
                         <div class="ac-grid">
                             <!-- AC 3.01 -->
                             <div class="ac-card">
@@ -388,7 +392,8 @@
                         applications informatiques pour les R&T. Automatisation et scripts.</p>
 
                     <div class="niveau-group">
-                        <h3 class="niveau-title">Niveau 1 : S'intégrer dans un service informatique</h3>
+                        <h3 class="niveau-title"><span>Niveau 1 : S'intégrer dans un service informatique (Année
+                                1)</span> <i class="fas fa-chevron-down"></i></h3>
                         <div class="ac-grid">
                             <!-- AC 1.04 -->
                             <div class="ac-card">
@@ -441,7 +446,8 @@
                     </div>
 
                     <div class="niveau-group">
-                        <h3 class="niveau-title">Niveau 2 : Développer une application R&T</h3>
+                        <h3 class="niveau-title"><span>Niveau 2 : Développer une application R&T (Année 2)</span> <i
+                                class="fas fa-chevron-down"></i></h3>
                         <div class="ac-grid">
                             <!-- AC 2.03 -->
                             <div class="ac-card">
@@ -505,7 +511,8 @@
                         infrastructures et les données contre les menaces.</p>
 
                     <div class="niveau-group">
-                        <h3 class="niveau-title">Niveau 2 : Sécuriser un système d'information</h3>
+                        <h3 class="niveau-title"><span>Niveau 2 : Sécuriser un système d'information (Année 2)</span> <i
+                                class="fas fa-chevron-down"></i></h3>
                         <div class="ac-grid">
                             <div class="ac-card">
                                 <div class="ac-card-header">
@@ -567,7 +574,8 @@
                         performances. Supervision d'infrastructure en temps réel.</p>
 
                     <div class="niveau-group">
-                        <h3 class="niveau-title">Niveau 2 : Superviser une infrastructure</h3>
+                        <h3 class="niveau-title"><span>Niveau 2 : Superviser une infrastructure (Année 2)</span> <i
+                                class="fas fa-chevron-down"></i></h3>
                         <div class="ac-grid">
                             <div class="ac-card">
                                 <div class="ac-card-header">
@@ -699,13 +707,22 @@
 
         // AC Toggle Logic
         document.addEventListener('click', (e) => {
-            const btn = e.target.closest('.ac-toggle');
-            if (btn) {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('i');
+            // Toggle Year Accordions
+            const yearBtn = e.target.closest('.niveau-title');
+            if (yearBtn) {
+                const acGrid = yearBtn.nextElementSibling;
+                yearBtn.classList.toggle('active');
+                acGrid.classList.toggle('active');
+            }
+
+            // Toggle AC Reflection Content
+            const acBtn = e.target.closest('.ac-toggle');
+            if (acBtn) {
+                const content = acBtn.nextElementSibling;
+                const icon = acBtn.querySelector('i');
 
                 content.classList.toggle('active');
-                btn.classList.toggle('active');
+                acBtn.classList.toggle('active');
 
                 if (content.classList.contains('active')) {
                     icon.classList.replace('fa-chevron-down', 'fa-chevron-up');

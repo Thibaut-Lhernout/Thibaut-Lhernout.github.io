@@ -681,19 +681,47 @@ footer {
 }
 
 .niveau-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--secondary);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
+    background: rgba(14, 165, 233, 0.05);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
 }
 
-.niveau-title::before {
+.niveau-title:hover {
+    background: rgba(14, 165, 233, 0.1);
+    border-color: var(--primary);
+}
+
+.niveau-title i {
+    font-size: 1.1rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.niveau-title.active i {
+    transform: rotate(180deg);
+}
+
+.niveau-title span {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.niveau-title span::before {
     content: '';
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background: var(--secondary);
     border-radius: 50%;
 }
@@ -702,6 +730,21 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: var(--space-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease, margin 0.3s ease;
+    padding: 0 0.5rem;
+    margin-top: 0;
+    opacity: 0;
+}
+
+.ac-grid.active {
+    max-height: 5000px;
+    /* Large enough to contain any AC grid */
+    padding: var(--space-md) 0.5rem;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    opacity: 1;
 }
 
 .ac-card {
