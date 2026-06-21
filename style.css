@@ -730,6 +730,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: var(--space-md);
+    align-items: start;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out, padding 0.3s ease, margin 0.3s ease;
